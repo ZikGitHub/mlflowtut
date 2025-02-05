@@ -1,0 +1,6 @@
+mlruns/
+run_artifacts/
+testing_mlflow_artifacts/
+hello_world.txt
+__pycache__/
+
