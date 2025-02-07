@@ -3,8 +3,3 @@ run_artifacts/
 testing_mlflow_artifacts/
 hello_world.txt
 __pycache__/
-
-custom_model_artifacts/
-model_signature_artifacts/
-serving_multiple_models/
-
