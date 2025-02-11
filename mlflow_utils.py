@@ -66,3 +66,24 @@ def get_mlflow_experiment(
         raise ValueError("Either experiment_id or experiment_name must be provided.")
     
     return experiment
+
+
+
+def create_dataset(n_samples:int=1000, n_features:int=50, n_informative:int=10, random_state:int=42)->pd.DataFrame:
+    """
+    creater a dataset for testing.
+    
+    :return:pd.DataFrame
+    """
+
+    X,y = make_classification(
+        n_samples=n_samples, 
+        n_features=n_features, 
+        n_informative=n_informative, 
+        class_sep=0.1,
+        random_state=random_state)
+    
+    df = pd.DataFrame(X, columns=[f"feature_{i}" for i in range(n_features)])
+    df["target"] = y
+
+    return df
